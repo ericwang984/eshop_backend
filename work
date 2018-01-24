@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ROOT_NAME=eshop
+
+# change to my best guess at the working directory
+if [[ -d ~/test/"$ROOT_NAME"_backend ]]; then
+  # we are local
+  echo 'eshop - local environment'
+  cd ~/test/"$ROOT_NAME"_backend
+  # activate the virtual env
+  workon $ROOT_NAME
+
+fi
+
+alias dshell="./manage.py shell_plus --quiet-load"
+
+alias apiserve="./manage.py runserver 0.0.0.0:9000"

@@ -1,0 +1,396 @@
+[23/Jan/2018 23:15:41] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/response.py", line 71, in rendered_content
+    ret = renderer.render(self.data, media_type, context)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/renderers.py", line 675, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/renderers.py", line 617, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/renderers.py", line 540, in get_raw_data_form
+    content = renderer.render(serializer.data, accepted, context)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 503, in data
+    ret = super(Serializer, self).data
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 243, in data
+    self._data = self.get_initial()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 386, in get_initial
+    for field in self.fields.values()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 939, in get_fields
+    field_name, info, model, depth
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 1076, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 1182, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `is_public` is not valid for model `User`.
+[24/Jan/2018 22:11:30] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/response.py", line 71, in rendered_content
+    ret = renderer.render(self.data, media_type, context)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/renderers.py", line 675, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/renderers.py", line 617, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/renderers.py", line 540, in get_raw_data_form
+    content = renderer.render(serializer.data, accepted, context)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 503, in data
+    ret = super(Serializer, self).data
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 243, in data
+    self._data = self.get_initial()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 386, in get_initial
+    for field in self.fields.values()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 339, in fields
+    for key, value in self.get_fields().items():
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 939, in get_fields
+    field_name, info, model, depth
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 1076, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/serializers.py", line 1182, in build_unknown_field
+    (field_name, model_class.__name__)
+ImproperlyConfigured: Field name `is_public` is not valid for model `User`.
+[24/Jan/2018 22:23:54] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:24:15] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ericwang/test/eshop_backend/backend/users/views.py", line 68, in post
+    user = User.objects.create_user(email, password, first_name, last_name, **deets)
+  File "/Users/ericwang/test/eshop_backend/backend/users/managers.py", line 66, in create_user
+    user.save()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 74, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 159, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 101, in _record
+    return method(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+IntegrityError: duplicate key value violates unique constraint "users_user_email_key"
+DETAIL:  Key (email)=(eric+1@huddle.com.au) already exists.
+
+[24/Jan/2018 22:24:16] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:28:09] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:30:58] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ericwang/test/eshop_backend/backend/users/views.py", line 57, in post
+    email = self.request.data['email']
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "u'email'"
+[24/Jan/2018 22:31:50] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ericwang/test/eshop_backend/backend/users/views.py", line 71, in post
+    user = User.objects.create_user_random_password(email, first_name, last_name, **deets)
+  File "/Users/ericwang/test/eshop_backend/backend/users/managers.py", line 42, in create_user_random_password
+    return self.create_user(email, generate_random_string(24), first_name, last_name, has_set_password=False, **extra_fields)
+  File "/Users/ericwang/test/eshop_backend/backend/users/managers.py", line 66, in create_user
+    user.save()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 74, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 159, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 101, in _record
+    return method(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+IntegrityError: duplicate key value violates unique constraint "users_user_email_key"
+DETAIL:  Key (email)=(eric+test1@huddle.com.au) already exists.
+
+[24/Jan/2018 22:31:51] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:34:39] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ericwang/test/eshop_backend/backend/users/views.py", line 71, in post
+    user = User.objects.create_user(email, password, first_name, last_name, **deets)
+  File "/Users/ericwang/test/eshop_backend/backend/users/managers.py", line 66, in create_user
+    user.save()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 74, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 159, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 101, in _record
+    return method(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+IntegrityError: duplicate key value violates unique constraint "users_user_email_key"
+DETAIL:  Key (email)=(eric+test1@huddle.com.au) already exists.
+
+[24/Jan/2018 22:34:39] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:39:12] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:41:06] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:42:36] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/ericwang/test/eshop_backend/backend/users/views.py", line 71, in post
+    user = User.objects.create_user(email, password, first_name, last_name, **deets)
+  File "/Users/ericwang/test/eshop_backend/backend/users/managers.py", line 66, in create_user
+    user.save()
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/contrib/auth/base_user.py", line 74, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 159, in execute
+    return self._record(self.cursor.execute, sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/tracking.py", line 101, in _record
+    return method(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+IntegrityError: duplicate key value violates unique constraint "users_user_email_key"
+DETAIL:  Key (email)=(eric+test4@huddle.com.au) already exists.
+
+[24/Jan/2018 22:42:36] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)
+[24/Jan/2018 22:43:03] ERROR [django.request:284] Internal Server Error: /user/create
+Traceback (most recent call last):
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/middleware.py", line 129, in process_response
+    panel.generate_stats(request, response)
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/panel.py", line 192, in generate_stats
+    query['sql'] = reformat_sql(query['sql'])
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/debug_toolbar/panels/sql/utils.py", line 27, in reformat_sql
+    return swap_fields(''.join(stack.run(sql)))
+  File "/Users/ericwang/.virtualenvs/eshop/lib/python2.7/site-packages/sqlparse/engine/filter_stack.py", line 29, in run
+    stream = filter_.process(stream)
+TypeError: process() takes exactly 3 arguments (2 given)

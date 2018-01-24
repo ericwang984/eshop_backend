@@ -1,0 +1,8 @@
+Django==1.9.4
+django-debug-toolbar==1.5
+djangorestframework==3.3.2
+djangorestframework-jwt==1.7.2
+django-extensions==1.7.3
+psycopg2==2.6.1
+names==0.3.0
+shortuuid==0.4.3
