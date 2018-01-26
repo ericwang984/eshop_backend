@@ -18,6 +18,9 @@ from django.utils.translation import ugettext_lazy as _
 
 # project
 from users.managers import UserManager
+from core.mixins import (
+    TimestampBase, ShortUUIDBase, StatusBase
+)
 
 
 # constants
@@ -28,7 +31,7 @@ from core.constants import (
 
 
 
-class User(AbstractBaseUser, PermissionsMixin):
+class User(AbstractBaseUser, PermissionsMixin, ShortUUIDBase, TimestampBase, StatusBase):
     """[summary]
 
     [description]
@@ -36,9 +39,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     Extends:
         AbstractBaseUser
         PermissionsMixin
+        ShortUUIDBase
 
     Variables:
-        slug {[type]} -- [description]
         is_staff {bool} -- [description]
         is_active {bool} -- [description]
         date_joined {[type]} -- [description]
@@ -49,15 +52,10 @@ class User(AbstractBaseUser, PermissionsMixin):
         objects {[type]} -- UserManager
     """
 
-    # for referring to user via API urls
-    slug = ShortUUIDField()
-
     # regular django (admin) fields
     is_staff = models.BooleanField(_('staff status'), default=False,
         help_text='Designates whether the user appears under Customer or'
         ' Staff and can log into this admin site')
-    is_active = models.BooleanField(_('active'), default=True,
-        help_text='Designates whether this user is active and can log in')
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
     # basic user profile fields
@@ -68,8 +66,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
 
     has_set_password = models.BooleanField(default=False)
-
-    is_new = models.BooleanField(default=False)
 
     first_name = models.CharField(_('first name'), max_length=30)
     last_name = models.CharField(_('last name'), max_length=30)

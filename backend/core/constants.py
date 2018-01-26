@@ -12,7 +12,7 @@ MONTHS_PER_YEAR = Decimal('12')
 
 
 class GENDER(object):
-    """Genders as required by Veda.
+    """Genders of the user.
     """
 
     MALE = 'M'
@@ -34,5 +34,42 @@ class GENDER(object):
         },
         UNSPECIFIED: {
             'label': 'Unspecified'
+        }
+    }
+
+
+class CATEGORIES(object):
+    """Categories for products.
+    """
+
+    BREAD = 'B'
+    DIARY = 'D'
+    FRUITS = 'F'
+    SEASONINGS = 'S'
+    VEGETABLES = 'V'
+
+    CHOICES = (
+        (BREAD, 'Bread'),
+        (DIARY, 'Diary'),
+        (FRUITS, 'Fruits'),
+        (SEASONINGS, 'Seasonings'),
+        (VEGETABLES, 'Vegetables'),
+    )
+
+    DATA = {
+        BREAD: {
+            'label': 'Bread'
+        },
+        DIARY: {
+            'label': 'Diary'
+        },
+        FRUITS: {
+            'label': 'Fruits'
+        },
+        SEASONINGS: {
+            'label': 'Seasonings'
+        },
+        VEGETABLES: {
+            'label': 'Vegetables'
         }
     }

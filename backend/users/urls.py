@@ -49,7 +49,7 @@ urlpatterns = [
     ),
 
     url(
-        r'^create$',
+        r'^$',
         CreateUserView.as_view(),
         name="create"
     ),

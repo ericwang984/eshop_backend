@@ -16,6 +16,16 @@ urlpatterns = urlpatterns + [
             namespace='users')
         ),
 
+    url(r'^product/',
+        include('products.urls',
+            namespace='products')
+        ),
+
+    url(r'^cart/',
+        include('carts.urls',
+            namespace='carts')
+        ),
+
 
 ]
 

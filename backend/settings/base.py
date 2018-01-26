@@ -23,6 +23,8 @@ CORS_ORIGIN_WHITELIST = []
 PROJECT_APPS = [
     'core',
     'users',
+    'products',
+    'carts'
 ]
 LIBRARY_APPS = [
     'rest_framework',

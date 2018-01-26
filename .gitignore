@@ -1,0 +1,7 @@
+*.crt
+*.csr
+*.log
+*.pyc
+
+logs/
+.vscode/
