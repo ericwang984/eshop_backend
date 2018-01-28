@@ -17,7 +17,7 @@ import logging
 LOGGER = logging.getLogger(__name__)
 
 
-class CartQuerySet(models.QuerySet):
+class OrderQuerySet(models.QuerySet):
     """Queryset defines queryset filters describing model subsets.
 
     Extends:
@@ -28,22 +28,22 @@ class CartQuerySet(models.QuerySet):
         return self.filter(is_active=True)
 
 
-class CartManager(models.Manager):
+class OrderManager(models.Manager):
     """Model manager which gives access to filtered querysets.
     """
 
     def get_queryset(self):
-        """Returns the manager's queryset which is a CartQuerySet.
+        """Returns the manager's queryset which is a OrderQuerySet.
 
         Returns:
-          Queryset -- CartQuerySet
+          Queryset -- OrderQuerySet
         """
-        return CartQuerySet(self.model, using=self._db)
+        return OrderQuerySet(self.model, using=self._db)
 
     def active(self):
-        """Returns the queryset of carts which are active.
+        """Returns the queryset of orders which are active.
 
         Returns:
-          Queryset -- carts which are active.
+          Queryset -- Orders that are active.
         """
         return self.get_queryset().active()

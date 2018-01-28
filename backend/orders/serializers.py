@@ -8,7 +8,7 @@ from __future__ import (
 from rest_framework import serializers
 
 # projects
-from products.models import Product
+from orders.models import Order
 
 
 # logging
@@ -16,28 +16,32 @@ from logging import getLogger
 LOGGER = getLogger(__name__)
 
 
-class ProductSerializer(serializers.ModelSerializer):
-    """Serializer for product model queries.
+class OrderSerializer(serializers.ModelSerializer):
+    """Serializer for order model queries.
 
     Extends:
         serializers.ModelSerializer
     """
 
     class Meta:
-        model = Product
+        model = Order
 
         fields = (
+            'id',
             'slug',
-            'category',
-            'price',
-            'title',
-            'imageUrl',
             'created',
-            'updated'
+            'updated',
+            'user',
+            'address',
+            'cart',
+            'total_price'
         )
 
         read_only_fields = (
+            'id',
             'slug',
             'created',
-            'updated'
+            'updated',
+            'user',
+            'total_price'
         )

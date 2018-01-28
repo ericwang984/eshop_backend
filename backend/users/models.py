@@ -25,7 +25,7 @@ from core.mixins import (
 
 # constants
 from core.constants import (
-    GENDER
+    GENDER, STATES
 )
 
 
@@ -109,4 +109,49 @@ class User(AbstractBaseUser, PermissionsMixin, ShortUUIDBase, TimestampBase, Sta
     @property
     def has_password(self):
         return self.password != ''
+
+
+
+class Address(ShortUUIDBase, TimestampBase):
+    """Model which describes a user's address
+
+    Extends:
+        models.Model
+
+    Variables:
+        slug {ShortUUID} -- [description]
+        unit_number {str} -- [description]
+        street_number {str} -- [description]
+        street_name {str} -- [description]
+        suburb {FK} -- [description]
+        user {FK} -- [description]
+    """
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='users_addresses', null=True, blank=True)
+
+    unit_number = models.CharField(max_length=63, null=True, blank=True)
+    level_number = models.CharField(max_length=63, null=True, blank=True)
+    street_number = models.CharField(max_length=63, null=True, blank=True)
+    street_name = models.CharField(max_length=63, null=True, blank=True)
+    suburb = models.CharField(max_length=63, null=True, blank=True)
+    postcode = models.CharField(max_length=8, null=True, blank=True)
+    state = models.CharField(max_length=4, null=True, blank=True, choices=STATES.CHOICES)
+
+
+    def __unicode__(self):
+        """Unicode description."""
+        return "%s %s %s %s %s %s %s" % (
+            (("%s " % self.unit_number) if self.unit_number else ""),
+            (("%s " % self.level_number) if self.level_number else ""),
+            self.street_number, self.street_name,
+            self.suburb, self.postcode, self.state
+        )
+
+    class Meta:
+        verbose_name = 'address'
+        verbose_name_plural = 'addresses'
+
+
+
+
+
 

@@ -52,9 +52,14 @@ class Cart(ShortUUIDBase, TimestampBase, StatusBase):
         """Unicode description."""
         return '%s' % (self.id)
 
+    @property
+    def carts_items(self):
+        """ Return all the items of a cart.
+        """
+        return self.items_cart.all()
 
 
-class CartItem(TimestampBase):
+class CartItem(ShortUUIDBase, TimestampBase):
     """ A table connect cart and product.
     Extends:
         TimestampBase
@@ -64,6 +69,7 @@ class CartItem(TimestampBase):
     """
     cart = models.ForeignKey('Cart', related_name="items_cart")
     item = models.ForeignKey('products.Product', related_name="carts_item")
+    quantity = models.PositiveIntegerField(default=0)
 
     class Meta:
         verbose_name = 'Cart item'
@@ -73,3 +79,8 @@ class CartItem(TimestampBase):
     def __unicode__(self):
         """Unicode description."""
         return '%s %s %s' % (self.id, self.cart, self.item.title)
+
+    @property
+    def total_price(self):
+        """ Return the total price of the item """
+        return self.item.price * self.quantity

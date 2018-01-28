@@ -1,5 +1,3 @@
-"""Serializers for the Users API.
-"""
 
 # core
 from __future__ import unicode_literals
@@ -8,7 +6,7 @@ from __future__ import unicode_literals
 from rest_framework import serializers
 
 # projects
-from users.models import User
+from users.models import User, Address
 
 
 # logging
@@ -31,16 +29,12 @@ class UserSerializer(serializers.ModelSerializer):
             'id',
             'email',
             'slug',
-
             'date_joined',
             'last_login',
-
             'is_staff',
             'is_new',
-
             'first_name',
             'last_name',
-
             'mobile',
             'dob',
             'gender',
@@ -61,6 +55,26 @@ class UserSerializer(serializers.ModelSerializer):
             'last_name',
         )
 
+class AddressSerializer(serializers.ModelSerializer):
+    """Serializer which creates and updates the address of user."""
+
+    class Meta:
+        model = Address
+        fields = (
+            'id',
+            'slug',
+            'unit_number',
+            'level_number',
+            'street_number',
+            'street_name',
+            'suburb',
+            'postcode',
+            'state',
+        )
+        read_only_fields = (
+            'id',
+            'slug',
+        )
 
 
 

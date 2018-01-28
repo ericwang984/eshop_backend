@@ -73,3 +73,54 @@ class CATEGORIES(object):
             'label': 'Vegetables'
         }
     }
+
+class STATES(object):
+    """Categories for products.
+    """
+
+    NSW = 'N'
+    VIC = 'V'
+    ACT = 'C'
+    QLD = 'Q'
+    SA = 'S'
+    NT = 'T'
+    WA = 'W'
+    TAS = 'A'
+
+    CHOICES = (
+        (NSW, 'New South Wales'),
+        (VIC, 'Victoria'),
+        (ACT, 'Australian Capital Territory'),
+        (QLD, 'Queensland'),
+        (SA, 'South Australia'),
+        (NT, 'Northern Territory'),
+        (WA, 'Western Australia'),
+        (TAS, 'Tasmania'),
+    )
+
+    DATA = {
+        NSW: {
+            'label': 'New South Wales'
+        },
+        VIC: {
+            'label': 'Victoria'
+        },
+        ACT: {
+            'label': 'Australian Capital Territory'
+        },
+        QLD: {
+            'label': 'Queensland'
+        },
+        SA: {
+            'label': 'South Australia'
+        },
+        NT: {
+            'label': 'Northern Territory'
+        },
+        WA: {
+            'label': 'Western Australia'
+        },
+        TAS: {
+            'label': 'Tasmania'
+        },
+    }

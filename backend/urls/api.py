@@ -26,6 +26,11 @@ urlpatterns = urlpatterns + [
             namespace='carts')
         ),
 
+    url(r'^order/',
+        include('orders.urls',
+            namespace='orders')
+        ),
+
 
 ]
 

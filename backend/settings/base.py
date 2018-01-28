@@ -24,7 +24,8 @@ PROJECT_APPS = [
     'core',
     'users',
     'products',
-    'carts'
+    'carts',
+    'orders'
 ]
 LIBRARY_APPS = [
     'rest_framework',

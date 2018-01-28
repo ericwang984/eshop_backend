@@ -16,7 +16,8 @@ from rest_framework_jwt.views import (
 
 # projects
 from users.views import (
-    CreateUserView
+    CreateUserView, AddressListCreateView,
+    AddressRetrieveUpdateDestroyView
 )
 
 # constants
@@ -51,9 +52,20 @@ urlpatterns = [
     url(
         r'^$',
         CreateUserView.as_view(),
-        name="create"
+        name="user_create"
     ),
 
+    url(
+        r'^address$',
+        AddressListCreateView.as_view(),
+        name="address_list_create"
+    ),
+
+    url(
+        r'^address/(?P<address_slug>\w{22})$',
+        AddressRetrieveUpdateDestroyView.as_view(),
+        name="address_retrieve_update_destroy"
+    ),
     # url(
     #     r'^users$',
     #     UsersList.as_view(),

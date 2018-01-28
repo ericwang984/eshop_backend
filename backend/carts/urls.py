@@ -15,7 +15,8 @@ from django.conf.urls import url
 
 # projects
 from carts.views import (
-    CartCreateListView, CartRetrieveUpdateDestroyView
+    CartCreateListView, CartRetrieveUpdateDestroyView,
+    ItemListCreateView, ItemRetrieveUpdateDestroyView
 )
 
 # constants
@@ -38,6 +39,18 @@ urlpatterns = [
         r'^(?P<cart_slug>\w{22})$',
         CartRetrieveUpdateDestroyView.as_view(),
         name="cart_retrieve_update_destroy"
+    ),
+
+    url(
+        r'^(?P<cart_slug>\w{22})/items$',
+        ItemListCreateView.as_view(),
+        name="item_list_create"
+    ),
+
+    url(
+        r'^(?P<cart_slug>\w{22})/items/(?P<item_slug>\w{22})$',
+        ItemRetrieveUpdateDestroyView.as_view(),
+        name="item_list"
     ),
 
 ]

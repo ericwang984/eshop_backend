@@ -1,5 +1,3 @@
-"""Models for the Users API.
-"""
 
 # core
 from __future__ import (
@@ -23,8 +21,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 # projects
-from products.serializers import ProductSerializer
-from products.models import Product
+from orders.serializers import OrderSerializer
+from orders.models import Order
 
 # constants
 
@@ -34,31 +32,36 @@ from logging import getLogger
 LOGGER = getLogger(__name__)
 
 
-class ProductCreateListView(ListCreateAPIView):
-    """ Used to list and create products.
+class OrderCreateListView(ListCreateAPIView):
+    """ Used to list and create orders.
     Extends:
         ListCreateAPIView
     """
-    permission_classes = (IsAdminUser, )
-    serializer_class = ProductSerializer
+    permission_classes = (IsAuthenticated, )
+    serializer_class = OrderSerializer
 
     def get_queryset(self):
-        return Product.objects.active()
+        return Order.objects.active().filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(
+            user=self.request.user if self.request.user.is_authenticated() else None,
+        )
 
 
-class ProductRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
-    """ Used to retrieve update and destory products.
+class OrderRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
+    """ Used to retrieve update and destory orders.
     Extends:
         RetrieveUpdateDestroyAPIView
     """
-    permission_classes = (IsAdminUser, )
-    serializer_class = ProductSerializer
+    permission_classes = (IsAuthenticated, )
+    serializer_class = OrderSerializer
 
     def get_queryset(self):
-        return Product.objects.active()
+        return Order.objects.active().filter(user=self.request.user)
 
     def get_object(self):
-        return get_object_or_404(self.get_queryset(), slug=self.kwargs['product_slug'])
+        return get_object_or_404(self.get_queryset(), slug=self.kwargs['order_slug'])
 
     def destroy(self, request, *args, **kwargs):
         instance = self.get_object()

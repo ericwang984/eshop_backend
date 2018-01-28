@@ -28,8 +28,10 @@ from rest_framework_jwt.settings import api_settings
 
 
 # projects
-from users.models import User
-from users.serializers import UserSerializer
+from users.models import User, Address
+from users.serializers import (
+    UserSerializer, AddressSerializer
+)
 
 # constants
 
@@ -75,19 +77,44 @@ class CreateUserView(CreateAPIView):
 
         # Serialize the user so that it can be posted back.
         serializer = UserSerializer(user)
-        print serializer
         user_data = serializer.data
-        print user_data
 
         # Add an authentication token
         jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-        print jwt_payload_handler
         jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
-        print jwt_encode_handler
 
         payload = jwt_payload_handler(user)
-        print payload
         user_data['token'] = jwt_encode_handler(payload)
-        print user_data['token']
 
         return Response(user_data, status.HTTP_200_OK)
+
+
+class AddressListCreateView(ListCreateAPIView):
+    """ Used to list and create addresses of a user.
+    Extends:
+        ListCreateAPIView
+    """
+    permission_classes = (IsAuthenticated, )
+    serializer_class = AddressSerializer
+
+    def get_queryset(self):
+        return Address.objects.filter(user=self.request.user)
+
+    def perform_create(self, serializer):
+        serializer.save(
+            user=self.request.user,
+        )
+
+
+class AddressRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
+    """ Used to retrieve update and destory address of a user.
+    Extends:
+        RetrieveUpdateDestroyAPIView
+    """
+    permission_classes = (IsAuthenticated, )
+    serializer_class = AddressSerializer
+
+    def get_object(self):
+        return get_object_or_404(Address, slug=self.kwargs['address_slug'])
+
+
