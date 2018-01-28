@@ -1,5 +1,3 @@
-"""Urls for the Users API.
-"""
 
 # core
 from __future__ import (

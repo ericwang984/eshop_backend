@@ -32,8 +32,6 @@ class Product(ShortUUIDBase, TimestampBase, StatusBase):
         TimestampBase
         StatusBase
 
-    Variables:
-        user {foreign key} -- The user who owns the cart
     """
 
     category = models.CharField(max_length=2, choices=CATEGORIES.CHOICES)

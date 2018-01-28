@@ -1,5 +1,4 @@
-"""Mixin to support models which have a refcode.
-"""
+
 # Core
 from __future__ import unicode_literals
 
